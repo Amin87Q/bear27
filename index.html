@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bear Shop</h1>
+        <div id="main-menu">
+            <button onclick="showBearShop()">Bear Shop</button>
+            <button onclick="showMiningBear()">Mining Bear</button>
+            <button onclick="showUpgrade()">Upgrade</button>
+        </div>
+        <div id="card-shop" class="hidden">
+            <!-- Card shop content -->
+            <div class="card" onclick="buyCard(0, 100, 1000)">
+                <img src="card1.png" alt="Card 0">
+                <p>Card 0: +100 Profit/Hour</p>
+            </div>
+            <div class="card" onclick="buyCard(1, 500, 2000)">
+                <img src="card2.png" alt="Card 1">
+                <p>Card 1: +500 Profit/Hour</p>
+            </div>
+            <div class="card" onclick="buyCard(2, 1000, 3000)">
+                <img src="card3.png" alt="Card 2">
+                <p>Card 2: +1000 Profit/Hour</p>
+            </div>
+        </div>
+        <div id="user-stats">
+            <p>Current Coins: <span id="totalCoins">0</span></p>
+            <p>Profit Per Hour: <span id="profitPerHour">0</span></p>
+        </div>
+        <button onclick="saveData()">Save Data</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

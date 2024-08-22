@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img id="profilePic" src="default-profile.png" alt="Profile Picture">
+            <div>
+                <h2 id="userName">User Name</h2>
+                <p>Level: <span id="currentLevel">1</span></p>
+                <p>Profit Per Hour: <span id="profitPerHourDisplay">0</span> Coins</p>
+            </div>
+        </header>
+        
+        <div id="score" class="score">
+            <img src="coin.png" alt="Coin" class="coin-icon"> <span id="totalCoins">0</span>
+        </div>
+        
+        <div class="hamster" id="clickableHamster">
+            <img src="male-hamster.png" alt="Hamster">
+        </div>
+        
+        <div class="info">
+            <div>
+                <p><img src="coin.png" alt="Coin"> Coins</p>
+                <p id="totalCoins">0</p>
+            </div>
+            <div>
+                <p>User Level</p>
+                <p id="userLevel">1</p>
+            </div>
+            <div>
+                <p>Profit Per Hour</p>
+                <p id="profitPerHour">0</p>
+            </div>
+        </div>
+        
+        <div class="level">
+            <p>Progress:</p>
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </div>
+        
+        <div class="options">
+            <button onclick="showBearShop()">Bear Shop</button>
+            <button onclick="showMiningBear()">Mining Bear</button>
+            <button onclick="showUpgrade()">Upgrade</button>
+        </div>
+
+        <div id="bearShop" class="bear-shop hidden">
+            <h2>Bear Shop</h2>
+            <div class="card" onclick="buyCard(0, 100, 1000)">
+                <img src="card1.png" alt="Card 1">
+                <p>Price: 1000 Coins</p>
+                <p>Profit: 100 Coins/Hour</p>
+            </div>
+            <div class="card" onclick="buyCard(1, 500, 5000)">
+                <img src="card2.png" alt="Card 2">
+                <p>Price: 5000 Coins</p>
+                <p>Profit: 500 Coins/Hour</p>
+            </div>
+            <div class="card" onclick="buyCard(2, 1000, 10000)">
+                <img src="card3.png" alt="Card 3">
+                <p>Price: 10000 Coins</p>
+                <p>Profit: 1000 Coins/Hour</p>
+            </div>
+        </div>
+
+        <div id="miningBear" class="mining-bear hidden">
+            <h2>Mining Bear</h2>
+            <p>Mining functionality is not implemented yet.</p>
+        </div>
+
+        <div id="upgrade" class="upgrade hidden">
+            <h2>Upgrade</h2>
+            <p>Upgrade functionality is not implemented yet.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
